@@ -1,0 +1,46 @@
+# pubspec.yaml
+name: fida_ui
+description: "Fida monitors ui"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  msix: ^2.0.0
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  font_awesome_flutter: ^9.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  riverpod_generator: ^2.4.0
+  build_runner: ^2.4.11
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
+  http: ^0.13.3
+  csv: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/app_icon.png
+    - assets/configs/config.json
+
+
+msix_config:
+  display_name: "Fida UI"
+  publisher_display_name: "Legacy"
+  identity_name: "com.Legacy.fidaui"
+  msix_version: "1.0.0.0"
+  logo_path: "assets/icons/app_icon.png"
+  capabilities: "internetClient,location"
+  architecture: "x64"
+  output_path: "build/windows/x64/runner/Release"
