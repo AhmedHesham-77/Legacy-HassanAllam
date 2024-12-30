@@ -1,3 +1,5 @@
+.gitignore
+
 # This is dynamic in a monorepo
 bin/internal/engine.version
 
